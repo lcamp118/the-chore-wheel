@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="the-chore-wheel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/the-chore-wheel.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
