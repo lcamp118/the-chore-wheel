@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+
+    <meta charset="UTF-8"/>
+
+    <!-- Responsive Web Functionality -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <!-- External Stylesheet Link -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <!-- Import jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+    <!-- External Javascript link -->
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+
+    <!-- Thymeleaf Title -->
+    <title th:text="${title}">The Chore Wheel</title>
+
+</head>
+<body>
+
+<nav th:fragment="nav" class="clearfix">
+    <ul class="clearfix">
+        <li><a href="#">Spin</a></li>
+        <li><a href="#">My House</a></li>
+        <li><a href="#">My Tasks</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Sign Out</a></li>
+    </ul>
+    <a href="#" id="pull">Menu</a>
+</nav>
+
+</body>
+</html>
