@@ -21,7 +21,7 @@ I got the idea to make this based on the episode of the Office where Pam tries t
 - Spring Boot
 - MySQL
 - Thymeleaf templates
-- Javascript)
+- Javascript
 
 ## What I'll Have to Learn
 I will need to learn at least the basics of Javascript. Maybe even more. Since this is something I'd already like to do, this project would be a great way to jump right in and do so. I'm sure there are other things I'll need to learn, such as cookies and logging in stuff (I haven't done that with Java yet, just with Python and Flask...), and other things will be discovered along the way.
