@@ -13,15 +13,15 @@ I got the idea to make this based on the episode of the Office where Pam tries t
 
 ## Features
 - **THE WHEEL**: The most basic feature of the site, this wheel will be instantly spinnable without logging in, so, therefore, it will be the first thing you see. As well as the main feature of the site. I've decided I'd like to make it in JavaScript, thus giving me a major new thing to make. I'll have to figure out exactly how first, but that's certainly part of the fun.
-- **USER ACCOUNTS**: Each account will have a uniqe name and password, an ability to keep your account logged in always (since most of the time you'll probably just be accessing this chore wheel at home), as well as a group of custom "rooms" (or areas of focus) which then have a smaller break down of tasks.
-- **SPECIFIC USER WHEELS**: Each account will have it's own custom wheel based on the categories / rooms / areas of focus that that specific user has imputted into the app. Each room has an option of having a "tiny wheel" of specific chores broken down. This will also be where we keep track of the last date it was done and how frequent this specific chore should be done, thus automatically making it not an option if you just did it yesterday. I also think it'd be cool to just have a to-do list break down as well.
+- **USER ACCOUNTS**: Each account will have a unique name and password, an ability to keep your account logged in always (since most of the time you'll probably just be accessing this chore wheel at home or on your own phone), as well as a group of custom "rooms" (or areas of focus) which then have a smaller break down of tasks.
+- **SPECIFIC USER TASK LISTS**: Each account will have it's own custom wheel based on the categories / rooms / areas of focus that that specific user has imputted into the app. Each room has an option of having a "tiny wheel" of specific chores broken down. This will also be where we keep track of the last date it was done and how frequent this specific chore should be done, thus automatically making it not an option if you just did it yesterday. I also think it'd be cool to just have a to-do list break down as well.
 
 ## Technologies
 - Java
 - Spring Boot
 - MySQL
 - Thymeleaf templates
-- JavaScript (not sure which framework)
+- Javascript)
 
 ## What I'll Have to Learn
-I will need to learn at least the basics of JavaScript. Maybe even more. Since this is something I'd already like to do, this project would be a great way to force me to do so. I'm sure there are other things I'll need to learn, such as cookies and logging in stuff (I haven't done that with Java yet, just with Python and Flask...), and other things will be discovered along the way.
+I will need to learn at least the basics of Javascript. Maybe even more. Since this is something I'd already like to do, this project would be a great way to jump right in and do so. I'm sure there are other things I'll need to learn, such as cookies and logging in stuff (I haven't done that with Java yet, just with Python and Flask...), and other things will be discovered along the way.
