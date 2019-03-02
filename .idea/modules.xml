@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.iml" filepath="$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.bonniewhy.the-chore-wheel.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the-chore-wheel.iml" filepath="$PROJECT_DIR$/.idea/modules/the-chore-wheel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the-chore-wheel.main.iml" filepath="$PROJECT_DIR$/.idea/modules/the-chore-wheel.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the-chore-wheel.test.iml" filepath="$PROJECT_DIR$/.idea/modules/the-chore-wheel.test.iml" />
     </modules>
   </component>
 </project>
