@@ -14,18 +14,18 @@ public class Task {
     @GeneratedValue
     private int id;
 
+    @NotNull
+    @Size(min = 3, max = 200)
     private String name;
 
     private boolean checked;
 
     private Date lastFinished;
 
-    @OneToMany
-    @JoinColumn(name = "room_id")
+    @ManyToOne
     private Room room;
 
-    @OneToMany
-    @JoinColumn(name = "user_id")
+    @ManyToOne
     private User user;
 
     // Constructors

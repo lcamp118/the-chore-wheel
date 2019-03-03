@@ -1,6 +1,8 @@
 package com.bonniewhy.thechorewheel.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -10,12 +12,15 @@ public class Room {
     @GeneratedValue
     private int id;
 
+    @NotNull
+    @Size(min = 3, max = 15)
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "rooms")
     private List<User> users;
 
-    @ManyToOne
+    @OneToMany
+    @JoinColumn(name = "room_id")
     private List<Task> tasks;
 
     // Constructors
@@ -34,11 +39,11 @@ public class Room {
         return name;
     }
 
-    public User getUsers() {
+    public List<User> getUsers() {
         return users;
     }
 
-    public Task getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
