@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<nav th:replace="fragments :: nav"></nav>
+
+<h1 th:text="${title}">Your House</h1>
+
+<ul>
+    <li th:each="room : ${rooms}">
+        <a th:href="'/room/list/' + ${room.id}" th:text="${room.name}"></a>
+    </li>
+</ul>
+
+</body>
+</html>

@@ -12,7 +12,7 @@
 
     <!-- Import jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+    <!-- <script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script> -->
 
     <!-- External Javascript link -->
     <script type="text/javascript" th:src="@{/js/script.js}"></script>
@@ -24,6 +24,9 @@
 <body>
 
 <nav th:fragment="nav" class="clearfix">
+    <!-- [ ] TODO: Add the sign in button to display if there is no one signed in. -->
+    <!-- [ ] TODO: Add responsive logo once it's designed. -->
+    <!-- [ ] TODO: Add actual links to the controller pages. -->
     <ul class="clearfix">
         <li><a href="#">Spin</a></li>
         <li><a href="#">My House</a></li>
@@ -33,6 +36,8 @@
     </ul>
     <a href="#" id="pull">Menu</a>
 </nav>
+
+<!-- [ ] TODO: Decide if it needs a footer. -->
 
 </body>
 </html>

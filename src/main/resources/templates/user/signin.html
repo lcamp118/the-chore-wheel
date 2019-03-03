@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<nav th:replace="fragments :: nav"></nav>
+
+<h1>Sign In!</h1>
+
+
+    <!-- [ ] TODO: Add functionality to the controller. -->
+    <form method="post">
+        <div class="form">
+            <label>Username</label>
+            <input type="text" />
+            <span class="errors"></span>
+        </div>
+
+        <div class="form">
+            <label>Password</label>
+            <input type="password" />
+            <span class="errors"></span>
+        </div>
+
+        <div class="form">
+            <span class="signup">Don't have an account? <a href="#">Sign up for one!</a></span>
+        </div>
+
+        <input type="submit" value="Let's Get Spinning!" />
+    </form>
+
+</body>
+</html>
