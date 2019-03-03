@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Entity
-public class Users {
+public class User {
 
     @Id
     @GeneratedValue
@@ -22,45 +22,50 @@ public class Users {
     @Size(min = 3, max = 50)
     private String password;
 
+    private String email;
+
+    private int points;
+
     @NotNull
     @Size(min = 3, max = 50)
     private String favoriteActivity;
 
-    @OneToMany
-    @JoinColumn(name = "room_id")
-    private List<Rooms> rooms = new ArrayList<>();
+    @ManyToMany
+    private List<Room> rooms = new ArrayList<>();
 
-    @OneToMany
-    @JoinColumn(name = "task_id")
-    private List<Tasks> tasks = new ArrayList<>();
+    @ManyToOne
+    private List<Task> tasks = new ArrayList<>();
 
-    public Users(String username, String password, String favoriteActivity) {
+    // Constructors
+    public User() { }
+
+    public User(String username, String password, String email, int points, String favoriteActivity) {
         this.username = username;
         this.password = password;
+        this.email = email;
+        this.points = points;
         this.favoriteActivity = favoriteActivity;
     }
 
-    public Users() { }
-
     // Getters
-    public int getId() {
-        return id;
-    }
-
     public String getUsername() {
         return username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
     public String getFavoriteActivity() {
         return favoriteActivity;
-    }
-
-    public List<Rooms> getRooms() {
-        return rooms;
-    }
-
-    public List<Tasks> getTasks() {
-        return tasks;
     }
 
     // Setters
@@ -72,8 +77,16 @@ public class Users {
         this.password = password;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Is this how this would be done?
+    public void setPoints(int newPoints) {
+        this.points = points + newPoints;
+    }
+
     public void setFavoriteActivity(String favoriteActivity) {
         this.favoriteActivity = favoriteActivity;
     }
-
 }
