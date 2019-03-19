@@ -2,20 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:fragment="head">
 
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
 
     <!-- Responsive Web Functionality -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- External Stylesheet Link -->
     <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <!-- Google Fonts / Font Awesome Import -->
+    <link href="https://fonts.googleapis.com/css?family=Overpass:400,600,800" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
     <!-- Import jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- <script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script> -->
 
-    <!-- External Javascript link -->
-    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+    <!-- External Javascript links -->
+    <script type="text/javascript" th:src="@{/js/navigation.js}"></script>
+    <script type="text/javascript" th:src="@{/js/wheel.js}"></script>
 
     <!-- Thymeleaf Title -->
     <title th:text="${title}">The Chore Wheel</title>
@@ -23,18 +28,19 @@
 </head>
 <body>
 
+<div th:fragment="logo"><a href="#"><img th:src="@{/images/logo.png}" class="logo" /></a></div>
+
 <nav th:fragment="nav" class="clearfix">
     <!-- [ ] TODO: Add the sign in button to display if there is no one signed in. -->
     <!-- [ ] TODO: Add responsive logo once it's designed. -->
     <!-- [ ] TODO: Add actual links to the controller pages. -->
     <ul class="clearfix">
-        <li><a href="#">Spin</a></li>
         <li><a href="#">My House</a></li>
         <li><a href="#">My Tasks</a></li>
         <li><a href="#">My Account</a></li>
-        <li><a href="#">Sign Out</a></li>
+        <li><a href="#" class="button">Sign Out</a></li>
     </ul>
-    <a href="#" id="pull">Menu</a>
+    <a href="#" id="pull"><span class="fas fa-bars"></span></a>
 </nav>
 
 <!-- [ ] TODO: Decide if it needs a footer. -->
