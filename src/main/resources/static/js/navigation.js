@@ -10,7 +10,7 @@ $(function() {
 
        $(window).resize(function() {
            var w = $(window).width();
-           if(w > 320 && menu.is(':hidden')) {
+           if(w > 500 && menu.is(':hidden')) {
                menu.removeAttr('style');
 
            }

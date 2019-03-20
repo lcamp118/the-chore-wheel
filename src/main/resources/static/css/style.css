@@ -1,3 +1,5 @@
+/* [ ] TODO: FIX ALL Z-INDEXES so that your slide menu will go over the top of the wheel. */
+
 /* General CSS Rules */
 *{
     margin: 0;
@@ -260,7 +262,7 @@ nav a#pull {
     content: "SPIN";
     font-size: 35px;
     text-align: center;
-    line-height: 120px;
+    line-height: 115px;
     color: #BFBBA6;
     text-shadow: 0 2px 0 #F2EEDD, 0 -2px 0 rgba(55, 51, 42, 0.3);
     position: relative;
@@ -362,8 +364,8 @@ nav a#pull {
         display: block;
         background-color: #37332A;
         width: 50px;
-        float: right;
-        position: relative;
+        right: 0px;
+        position: absolute;
     }
 
     nav a#pull:after {
@@ -374,6 +376,21 @@ nav a#pull {
         position: absolute;
         right: 15px;
         top: 10px;
+    }
+
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+        background: #37332A;
+    }
+
+    nav li:first-child {
+        margin-top: 60px;
+    }
+
+    nav li:last-child {
+        border-radius: 0 0 12px 12px;
     }
 
 }
@@ -443,6 +460,7 @@ nav a#pull {
         font-size: 18px;
     }
 
+    /* SHINE EFFECT */
     #shine {
         width: 250px;
         height: 250px;
@@ -455,16 +473,6 @@ nav a#pull {
 
 /* PHONE SCREENS */
 @media only screen and (max-width: 500px) {
-
-    nav {
-        height: 85px;
-    }
-
-    nav li {
-        display: block;
-        float: none;
-        width: 100%;
-    }
 
     .logo {
         width: 220px;
