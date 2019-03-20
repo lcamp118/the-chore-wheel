@@ -5,29 +5,35 @@
 
 <nav th:replace="fragments :: nav"></nav>
 
-<h1>Sign In!</h1>
+<!-- [ ] TODO: Add functionality to the controller. -->
+<div>Don't have an account? <a href="/signup">Sign up for one!</a></div>
 
+<div class="table">
+    <form method="post" th:object="${user}">
 
-    <!-- [ ] TODO: Add functionality to the controller. -->
-    <form method="post">
-        <div class="form">
-            <label>Username</label>
-            <input type="text" />
-            <span class="errors"></span>
+        <div class="row">
+            <div class="cell"><label>Username</label></div>
+            <div class="cell"><input type="text" /></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"><span class="error"></span></div>
         </div>
 
-        <div class="form">
-            <label>Password</label>
-            <input type="password" />
-            <span class="errors"></span>
+        <div class="row">
+            <div class="cell"><label>Password</label></div>
+            <div class="cell"><input type="password" /></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"><span class="error"></span></div>
         </div>
 
-        <div class="form">
-            <span class="signup">Don't have an account? <a href="#">Sign up for one!</a></span>
+        <div class="row">
+            <div class="cell"><input type="submit" value="I'M READY!" /></div>
         </div>
 
-        <input type="submit" value="Let's Get Spinning!" />
     </form>
-
+</div>
 </body>
 </html>

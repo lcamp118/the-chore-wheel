@@ -339,6 +339,62 @@ nav a#pull {
     animation: hh 0.1s;
 }
 
+/* FORM MANIPULATION */
+.table {
+    display: table;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.row {
+    width: 80%;
+}
+
+.cell {
+    font-family: "Overpass", sans-serif;
+    color: #37332A;
+    display: table-cell;
+    width: 13%;
+    text-align: right;
+}
+
+label {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.error {
+    color: #D54227;
+    text-align: right;
+}
+
+input[type=text], [type=password], [type=email] {
+    background-color: #EAE6D0;
+    color: #37332A;
+    padding: 12px 20px;
+    margin: 8px;
+    width: 100%;
+    display: inline-block;
+    border: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+input[type=submit] {
+    background-color: #4F4A3F;
+    color: #EAE6D0;
+    font-family: "Overpass", sans-serif;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* [ ] TODO: Figure out how to set a size for the form elements so they don't look really horrible when resizing the window. */
 /* IPAD LANDSCAPE */
 @media screen and (max-width: 1024px) {
 
