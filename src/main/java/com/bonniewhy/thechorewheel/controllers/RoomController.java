@@ -66,7 +66,7 @@ public class RoomController {
 
         if (errors.hasErrors()) {
 
-            return "room/add";
+            return "rooms/add";
 
         }
 
