@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<div th:replace="fragments :: logo"></div>
+
+<nav th:replace="fragments :: nav"></nav>
+
+<h1>Add Tasks</h1>
+
+<!-- [ ] TODO: Hook up functionality with the controller. -->
+<div class="table">
+    <form method="post" th:object="${room}">
+
+        <div class="row">
+            <div class="cell"><label th:for="name">Room</label></div>
+            <div class="cell"><input type="text" th:field="*{name}" /></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"><span class="error" th:errors="*{name}"></span></div>
+        </div>
+
+        <div class="row">
+            <div class="cell"><input type="submit" value="Add Room" /></div>
+        </div>
+</form>
+
+</div>
+</body>
+</html>
