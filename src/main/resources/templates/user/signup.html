@@ -3,9 +3,11 @@
 <head th:replace="fragments :: head"></head>
 <body>
 
+<div th:replace="fragments :: logo"></div>
+
 <nav th:replace="fragments :: nav"></nav>
 
-<!-- [ ] TODO: Hook up functionality to the controller -->
+<!-- [X] TODO: Hook up functionality to the controller -->
 <div class="table">
     <form method="post" th:object="${user}">
 

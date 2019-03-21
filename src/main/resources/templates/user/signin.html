@@ -3,12 +3,19 @@
 <head th:replace="fragments :: head"></head>
 <body>
 
+<div th:replace="fragments :: logo"></div>
+
 <nav th:replace="fragments :: nav"></nav>
 
-<!-- [ ] TODO: Add functionality to the controller. -->
-<div>Don't have an account? <a href="/signup">Sign up for one!</a></div>
+<!-- [X] TODO: Add functionality to the controller. -->
+
 
 <div class="table">
+
+    <div class="row">
+        <div class="right">Don't have an account? <a href="signup">Sign up for one!</a></div>
+    </div>
+
     <form method="post" th:object="${user}">
 
         <div class="row">

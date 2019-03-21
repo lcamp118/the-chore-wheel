@@ -359,6 +359,10 @@ nav a#pull {
     text-align: right;
 }
 
+.right {
+    text-align: right;
+}
+
 label {
     font-weight: 600;
     text-transform: uppercase;
