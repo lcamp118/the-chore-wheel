@@ -7,6 +7,12 @@
     <!-- Responsive Web Functionality -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+    <!-- Bootstrap  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animate.css Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+
     <!-- External Stylesheet Link -->
     <link rel="stylesheet" th:href="@{/css/style.css}" />
 
@@ -16,11 +22,11 @@
 
     <!-- Import jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- <script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script> -->
 
     <!-- External Javascript links -->
     <script type="text/javascript" th:src="@{/js/navigation.js}"></script>
     <script type="text/javascript" th:src="@{/js/wheel.js}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Thymeleaf Title -->
     <title th:text="${title}">The Chore Wheel</title>
@@ -33,7 +39,7 @@
 <nav th:fragment="nav" class="clearfix">
     <!-- [ ] TODO: Add the sign in button to display if there is no one signed in. -->
     <!-- [X] TODO: Add responsive logo once it's designed. -->
-    <!-- [ ] TODO: Add actual links to the controller pages. -->
+    <!-- [X] TODO: Add actual links to the controller pages. -->
     <ul class="clearfix">
         <li><a href="/room">My House</a></li>
         <li><a href="/task">My Tasks</a></li>

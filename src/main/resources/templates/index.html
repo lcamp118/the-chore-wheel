@@ -12,13 +12,13 @@
     <div id="wheel">
         <div id="inner-wheel">
             <div class="sec"><span class="fas fa-couch"></span></div>
-            <div class="sec"><span class="fas fa-apple-alt"></span></div>
-            <div class="sec"><span class="fas fa-laptop"></span></div>
             <div class="sec"><span class="fas fa-utensils"></span></div>
+            <div class="sec"><span class="fas fa-toilet-paper"></span></div>
             <div class="sec"><span class="fas fa-box-open"></span></div>
-            <div class="sec"><span class="fas fa-tree"></span></div>
-            <div class="sec"><span class="fas fa-spider"></span></div>
-            <div class="sec"><span class="fas fa-music"></span></div>
+            <div class="sec"><span class="fas fa-desktop"></span></div>
+            <div class="sec"><span class="fas fa-door-open"></span></div>
+            <div class="sec"><span class="fas fa-bed"></span></div>
+            <div class="sec"><span class="fas fa-seedling"></span></div>
         </div>
 
         <div id="spin">
@@ -33,10 +33,72 @@
 </div>
 
 <!-- [ ] TODO: Add the pop up to ask for room selections if there are none / someone is not signed in. -->
+<!-- Room Select Modal -->
+<div>
+    <div class="modal fade" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="roomModal">
+        <div class="modal-dialog pulse animated" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close wheelReset" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">CHOOSE YOUR ROOMS!</h2>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button" data-dismiss="modal">Close</button>
+                    <button type="button" class="modal-button">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- [ ] TODO: Add the pop up to appear once a room is selected. -->
+<!-- [X] TODO: Add the pop up to appear once a room is selected. -->
+<!-- To-Do Modal -->
+<div>
+    <div class="modal" id="toDoModal" tabindex="-1" role="dialog" aria-labelledby="toDoModal">
+        <div class="modal-dialog swing animated" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close wheelReset" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h1>Alright!</h1>
+                    <p>Time to clean the</p>
+                    <h2 class="roomSelect">BATHROOM</h2>
+                    <p>You got this! Come back here and click the button below when you're done.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button doneModal" data-dismiss="modal">FINISHED!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- [ ] TODO: Add the pop up to appear once someone has finished the task that was selected. -->
+<!-- [X] TODO: Add the pop up to appear once someone has finished the task that was selected. -->
+<!-- Done Modal -->
+<div>
+    <div class="modal" id="doneModal" tabindex="-1" role="dialog" aria-labelledby="doneModal">
+        <div class="modal-dialog tada animated" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close wheelReset" data-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h1>CONGRATULATIONS!!!</h1>
+                    <p>You did it! Look at you! <br />
+                    Now, go do something you'd actually like to be doing.</p>
+                    <p>Or, <a href="user/signup">make an account</a> and continue the productivity.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button wheelReset" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

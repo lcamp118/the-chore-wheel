@@ -8,7 +8,7 @@
 
 body {
     background-color: #BFBBA6;
-    color: #EAE6D0;
+    color: #37332A;
     font-family: 'Overpass', sans-serif;
 }
 
@@ -116,6 +116,7 @@ nav a#pull {
     content: '';
     position: absolute;
     border: 10px solid rgba(55, 51, 42, 0.1);
+    margin: 1px;
     width: 656px;
     height: 656px;
     border-radius: 50%;
@@ -127,6 +128,7 @@ nav a#pull {
     width: 100%;
     height: 100%;
 
+    /* CUBIC-BEZIER is basically like the drawing tool in Adobe Illustrator. In this context, it is controlling how the animation flows. Look it up for a more detailed view, but this has nothing to do with how the circle or slices is drawn, but everything to do with how fast / slow the wheel turns. */
     -webkit-transition: all 6s cubic-bezier(0, .99, .44, .99);
     -moz-transition: all 6 cubic-bezier(0, .99, .44, .99);
     -o-transition: all 6s cubic-bezier(0, .99, .44, .99);
@@ -143,7 +145,7 @@ nav a#pull {
     border-width: 398px 165px 0;
     border-color: #88C2B0 transparent; /* This color does not show up for some reason. */
     transform-origin: 165px 398px;
-    left: 174px;
+    left: 164px;
     top: -65px;
     opacity: 1;
 }
@@ -262,7 +264,7 @@ nav a#pull {
     content: "SPIN";
     font-size: 35px;
     text-align: center;
-    line-height: 115px;
+    line-height: 120px;
     color: #BFBBA6;
     text-shadow: 0 2px 0 #F2EEDD, 0 -2px 0 rgba(55, 51, 42, 0.3);
     position: relative;
@@ -337,6 +339,97 @@ nav a#pull {
 .spin {
     -webkit-animation: hh 0.1s; /* Chrome, Safari, Opera */
     animation: hh 0.1s;
+}
+
+/* MODALS */
+.modal-button {
+    color: #EAE6D0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background: #4F4A3F;
+    text-transform: uppercase;
+    margin: 15px;
+    line-height: 35px;
+    text-shadow: 1px 1px 0px #010102;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(55, 51, 42);
+    background-color: rgba(55, 51, 42, 0.4);
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #EAE6D0;
+}
+
+.modal-body {
+    text-align: center;
+    padding: 2px 16px;
+}
+
+.modal-body h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modal-body p {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.modal-body a {
+    color: #4F4A3F;
+}
+
+.modal-body a:hover {
+    color: #D54227;
+    text-decoration: none;
+}
+
+.modal-body a:active {
+    color: #C98F2A;
+}
+
+.modal-body a:visited {
+    color: #C0702B;
+    text-decoration: none;
+}
+
+.roomSelect {
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: 800;
+    font-size: 4em;
+    color: #C98F2A;
+    text-transform: uppercase;
+}
+
+.modal-footer {
+    text-align: center;
+    padding: 2px 16px;
+    background-color: #EAE6D0;
+    height: 85px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #EAE6D0;
+    margin: 10% auto;
+    padding: 0;
+    width: 80%;
+   /* box-shadow: 0 4px 8px 0 rgba(55, 51, 42, 0.2), 0 6px 20px 0 rgba(55, 51, 42, 0.19); */
 }
 
 /* FORM MANIPULATION */

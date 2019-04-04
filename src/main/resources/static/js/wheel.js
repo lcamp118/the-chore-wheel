@@ -57,6 +57,65 @@ $(document).ready(function(){
 
 			noY = t.offset().top;
 
+			// Hard-coded rooms in the order they appear in the wheel
+			var rooms = ["Living Room", "Kitchen", "Bathroom", "Basement", "Office", "Foyer", "Bedroom", "Yard"];
+
+			// This formula doesn't quite work for picking the correct room, but it is definitely the closest I've gotten.
+			var divider = 360 / rooms.length; // built in for the next phase
+			var offset = divider / 2; // half division since the pointer starts in the middle of a slice
+			var wheelValue = rooms[Math.floor(Math.ceil((totalDegree + offset) % 360) / divider)];
+
+			// Once the inner wheel stops moving...
+			$('#inner-wheel').one('transitionend', function() {
+
+			    // change the color and contents of the toDoModal
+			    if (wheelValue === "Living Room") {
+			        $(".roomSelect").css("color", "#D54227");
+			        $(".roomSelect").html("Living Room");
+			    } else if (wheelValue === "Kitchen") {
+			        $(".roomSelect").css("color", "#C0702B");
+			        $(".roomSelect").html("Kitchen");
+			    } else if (wheelValue === "Bathroom") {
+			        $(".roomSelect").css("color", "#C98F2A");
+			        $(".roomSelect").html("Bathroom");
+			    } else if (wheelValue === "Basement") {
+			        $(".roomSelect").css("color", "#898E36");
+			        $(".roomSelect").html("Basement");
+			    } else if (wheelValue === "Office") {
+			        $(".roomSelect").css("color", "#138D6C");
+			        $(".roomSelect").html("Office");
+			    } else if (wheelValue === "Foyer") {
+			        $(".roomSelect").css("color", "#81B999");
+			        $(".roomSelect").html("Foyer");
+			    } else if (wheelValue === "Bedroom") {
+			        $(".roomSelect").css("color", "#926C6C");
+			        $(".roomSelect").html("Bedroom");
+			    } else if (wheelValue === "Yard") {
+			        $(".roomSelect").css("color", "#D67260");
+			        $(".roomSelect").html("Yard");
+			    }
+
+			    $('#toDoModal').modal('show');
+
+			});
+
+            // Modal Button Clicking Changes
+            $(function () {
+
+                $(".doneModal").click(function() {
+
+                    $("#doneModal").modal();
+
+                });
+
+                $(".wheelReset").click(function() {
+
+                    $("#inner-wheel").removeAttr('style');
+
+                });
+
+            });
+
 		});
 	});
 
