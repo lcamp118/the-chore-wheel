@@ -58,7 +58,9 @@ $(document).ready(function(){
 			noY = t.offset().top;
 
 			// Hard-coded rooms in the order they appear in the wheel
-			var rooms = ["Living Room", "Kitchen", "Bathroom", "Basement", "Office", "Foyer", "Bedroom", "Yard"];
+			// [X] TODO: Get the wheel to land on the correct corresponding room with the slice it actually lands on.
+			// NOTE: THESE NEED TO BE IN REVERSE ORDER!!!
+			var rooms = ["Yard", "Bedroom", "Foyer", "Office", "Basement", "Bathroom", "Kitchen", "Living Room"];
 
 			// This formula doesn't quite work for picking the correct room, but it is definitely the closest I've gotten.
 			var divider = 360 / rooms.length; // built in for the next phase

@@ -51,7 +51,7 @@ public class RoomController {
 
     }
 
-    // [ ] TODO: Make sure to add a blocker for non-admin users to this route.
+    // [X] TODO: Make sure to add a blocker for non-admin users to this route.
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String addRooms(Model model) {
 
