@@ -553,7 +553,7 @@ input[type=submit] {
 
     /* WRAPPER */
     #wrapper {
-        width: 359px;
+        width: 343px;
     }
 
     /* WHEEL */
@@ -573,8 +573,8 @@ input[type=submit] {
     #wheel div.sec {
         border-width: 200px 83px 0;
         transform-origin: 83px 200px;
-        left: 90px;
-        top: -28px;
+        left: 80px;
+        top: -35px;
     }
 
     /* FONT SYMBOLS INSIDE SLICES */
