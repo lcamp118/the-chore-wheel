@@ -1,25 +1,35 @@
 package com.bonniewhy.thechorewheel.models;
 
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 
 @Entity
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue
     private int id;
 
     @NotNull
-    @Size(min = 3, max = 15)
+    @Size(min = 3)
     private String username;
 
     @NotNull
-    @Size(min = 3, max = 15)
+    @Size(min = 3, max = 255)
     private String password;
 
     @NotNull
@@ -27,8 +37,6 @@ public class User {
 
     @NotNull
     private String email;
-
-    private int points;
 
     @NotNull
     @Size(min = 3, max = 50)
@@ -41,14 +49,48 @@ public class User {
     @JoinColumn(name = "user_id")
     private List<Task> tasks = new ArrayList<>();
 
+    // Spring Security Methods
+    // [ ] TODO: Figure out why using the encrypter makes the password too long and how to fix it.
+//    public static BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Arrays.asList(new SimpleGrantedAuthority("USER"));
+    }
+
+    public static User getCurrentUser() {
+        Object loggedInUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User currentUser = (User) loggedInUser;
+        return currentUser;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
     // Constructors
     public User() { }
 
-    public User(String username, String password, String email, int points, String favoriteActivity) {
+    public User(String username, String password, String email, String favoriteActivity) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.points = points;
         this.favoriteActivity = favoriteActivity;
     }
 
@@ -67,10 +109,6 @@ public class User {
 
     public String getEmail() {
         return email;
-    }
-
-    public int getPoints() {
-        return points;
     }
 
     public String getFavoriteActivity() {
@@ -93,11 +131,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    // [ ] TODO: Is this how this would be done? Make sure points are adding as they are getting done.
-    public void setPoints(int newPoints) {
-        this.points = points + newPoints;
     }
 
     public void setFavoriteActivity(String favoriteActivity) {

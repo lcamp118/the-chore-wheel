@@ -11,49 +11,51 @@
 <div class="table">
     <form method="post" th:object="${user}">
 
+        <!--<input type="hidden" name="${_csrf.parameterName" value="${_csrf.token}">-->
+
         <div class="row">
-            <div class="cell"><label>Username</label></div>
-            <div class="cell"><input type="text" /></div>
+            <div class="cell"><label th:for="username">Username</label></div>
+            <div class="cell"><input type="text" th:field="*{username}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{username}"></span></div>
         </div>
 
         <div class="row">
-            <div class="cell"><label>Email</label></div>
-            <div class="cell"><input type="email" /></div>
+            <div class="cell"><label th:for="*{email}">Email</label></div>
+            <div class="cell"><input type="email" th:field="*{email}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{email}"></span></div>
         </div>
 
         <div class="row">
-            <div class="cell"><label>Password</label></div>
-            <div class="cell"><input type="password" /></div>
+            <div class="cell"><label th:for="*{password}">Password</label></div>
+            <div class="cell"><input type="password" th:field="*{password}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{password}"></span></div>
         </div>
 
         <div class="row">
-            <div class="cell"><label>Verify Password</label></div>
-            <div class="cell"><input type="password" /></div>
+            <div class="cell"><label th:for="*{verifyPassword}">Verify Password</label></div>
+            <div class="cell"><input type="password" th:field="*{verifyPassword}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{verifyPassword}"></span></div>
         </div>
 
         <div class="row">
-            <div class="cell"><label>Favorite Activity</label></div>
-            <div class="cell"><input type="text" /></div>
+            <div class="cell"><label th:for="*{favoriteActivity}">Favorite Activity</label></div>
+            <div class="cell"><input type="text" th:field="*{favoriteActivity}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{favoriteActivity}"></span></div>
         </div>
 
         <div class="row">

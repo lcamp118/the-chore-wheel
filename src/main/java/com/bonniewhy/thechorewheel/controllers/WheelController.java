@@ -5,6 +5,7 @@ import com.bonniewhy.thechorewheel.models.data.RoomDao;
 import com.bonniewhy.thechorewheel.models.data.TaskDao;
 import com.bonniewhy.thechorewheel.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -27,27 +28,26 @@ public class WheelController {
     @Autowired
     private UserDao userDao;
 
+    // [X] TODO: Might need to add a "temporary user" class for people not logged in. Not sure yet.
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String indexWithoutRooms(Model model) {
 
         model.addAttribute("rooms", roomDao.findAll());
         model.addAttribute("title", "Spin The Chore Wheel!");
-        // model.addAttribute(new User());
 
         return "index";
 
     }
 
-    // [ ] TODO: Might need to add a "temporary user" class for people not logged in. Not sure yet.
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public String indexWithRooms(Model model, @ModelAttribute @Valid User user, Errors errors) {
-
-        // [ ] TODO: For each room that is selected, add it to the model so it can generate the correct wheel.
-        model.addAttribute("rooms", roomDao.findAll());
-        model.addAttribute("title", "Spin The Chore Wheel!");
-
-        return "index";
-
-    }
+//    @RequestMapping(value = "", method = RequestMethod.POST)
+//    public String indexWithRooms(Model model, @ModelAttribute @Valid User user, Errors errors) {
+//
+//        // [ ] TODO: For each room that is selected, add it to the model so it can generate the correct wheel.
+//        model.addAttribute("rooms", roomDao.findAll());
+//        model.addAttribute("title", "Spin The Chore Wheel!");
+//
+//        return "index";
+//
+//    }
 
 }

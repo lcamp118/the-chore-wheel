@@ -9,6 +9,13 @@
 
 <!-- [X] TODO: Add functionality to the controller. -->
 
+<div th:if="${param.logout != null}" class="alert alert-success">You have been logged out.</div>
+<div th:if="${param.error != null}" class="alert alert-danger">
+    <strong>Failed to signin.</strong>
+    <span th:if="${session[SPRING_SECURITY_LAST_EXCEPTION] != null}">
+        <span th:text="${session[SPRING_SECURITY_LAST_EXCEPTION].message}">Invalid credentials.</span>
+    </span>
+</div>
 
 <div class="table">
 
@@ -18,22 +25,24 @@
 
     <form method="post" th:object="${user}">
 
+        <!--<input type="hidden" name="${_csrf.parameterName" value="${_csrf.token}">-->
+
         <div class="row">
-            <div class="cell"><label>Username</label></div>
-            <div class="cell"><input type="text" /></div>
+            <div class="cell"><label th:for="*{username}">Username</label></div>
+            <div class="cell"><input type="text" th:field="*{username}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{username}"></span></div>
         </div>
 
         <div class="row">
-            <div class="cell"><label>Password</label></div>
-            <div class="cell"><input type="password" /></div>
+            <div class="cell"><label th:for="*{password}">Password</label></div>
+            <div class="cell"><input type="password" th:field="*{password}" /></div>
         </div>
         <div class="row">
             <div class="cell"></div>
-            <div class="cell"><span class="error"></span></div>
+            <div class="cell"><span class="error" th:errors="*{password}"></span></div>
         </div>
 
         <div class="row">

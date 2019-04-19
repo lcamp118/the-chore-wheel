@@ -110,11 +110,11 @@ $(document).ready(function(){
 
                 });
 
-                $(".wheelReset").click(function() {
-
-                    $("#inner-wheel").removeAttr('style');
-
-                });
+//                $(".wheelReset").click(function() {
+//
+//                    $("#inner-wheel").removeAttr('style');
+//
+//                });
 
             });
 
